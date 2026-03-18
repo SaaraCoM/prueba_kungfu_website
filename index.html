@@ -18,12 +18,20 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Centro Yuanfen Kung Fu Sevilla — Artes Marciales Chinas</title>
-<meta name="description" content="Escuela de Kung Fu tradicional en Sevilla. Clases de Tang Lang Quan, Sanda, Defensa Personal, Kung Fu Infantil y Defensa Personal Femenina. ¡Ven a conocernos!">
-<meta property="og:title" content="Centro Yuanfen Kung Fu Sevilla">
-<meta property="og:description" content="Descubre el tesoro de las artes marciales chinas. Clases para todas las edades en Sevilla.">
+<title>Kung Fu Sevilla | Centro Yuanfen Kung Fu Sevilla | Artes Marciales Chinas</title>
+<meta name="description" content="Centro Yuanfen Kung Fu Sevilla: escuela de kung fu tradicional, sanda, defensa personal y kung fu infantil en Sevilla. Clases para todas las edades en Triana.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="kung fu sevilla, artes marciales sevilla, escuela kung fu sevilla, sanda sevilla, defensa personal sevilla, kung fu infantil sevilla, triana">
+<link rel="canonical" href="https://kungfusevilla.net/">
+<meta property="og:title" content="Kung Fu Sevilla | Centro Yuanfen Kung Fu Sevilla">
+<meta property="og:description" content="Escuela de kung fu en Sevilla con clases de Tang Lang Quan, sanda, defensa personal y kung fu infantil en Triana.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://kungfusevilla.net">
+<meta property="og:url" content="https://kungfusevilla.net/">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Centro Yuanfen Kung Fu Sevilla">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kung Fu Sevilla | Centro Yuanfen Kung Fu Sevilla">
+<meta name="twitter:description" content="Escuela de artes marciales chinas en Sevilla con clases para peques, jóvenes y adultos.">
 
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -655,6 +663,35 @@ const CONFIG = {
 };
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Centro Yuanfen Kung Fu Sevilla",
+  "url": "https://kungfusevilla.net/",
+  "description": "Escuela de kung fu y artes marciales chinas en Sevilla con clases de Tang Lang Quan, sanda, defensa personal y kung fu infantil.",
+  "telephone": "+34 617 76 92 32",
+  "email": "yuanfenkungfu@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "San Vicente de Paúl, 4",
+    "addressLocality": "Sevilla",
+    "postalCode": "41010",
+    "addressCountry": "ES"
+  },
+  "areaServed": "Sevilla",
+  "sameAs": [
+    "https://www.facebook.com/yuanfenkungfu"
+  ],
+  "sport": [
+    "Kung Fu",
+    "Sanda",
+    "Defensa personal",
+    "Artes marciales chinas"
+  ]
+}
+</script>
+
 <!-- ================================================================
      NAVEGACIÓN SUPERIOR
      ================================================================ -->
@@ -1008,11 +1045,15 @@ const CONFIG = {
         <span class="text-gold-400">Contacto</span>
       </h2>
       <p class="text-ink-300 max-w-xl mx-auto">
-        ¿Tienes alguna pregunta? ¿Quieres probar una clase? Escríbenos y te responderemos lo antes posible.
+        ¿Buscas una escuela de kung fu en Sevilla o quieres probar una clase en Triana? Escríbenos y te responderemos lo antes posible.
       </p>
     </div>
 
-    <form id="contact-form" class="space-y-5 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+    <form id="contact-form" name="contacto-kung-fu-sevilla" method="POST" action="/?form=ok#contacto" data-netlify="true" netlify-honeypot="bot-field" class="space-y-5 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      <input type="hidden" name="form-name" value="contacto-kung-fu-sevilla">
+      <p class="hidden">
+        <label>No rellenes este campo si eres humano: <input name="bot-field"></label>
+      </p>
       <div class="grid sm:grid-cols-2 gap-5">
         <div>
           <label for="nombre" class="block text-sm text-ink-300 mb-1.5 font-medium">Nombre</label>
@@ -1029,9 +1070,21 @@ const CONFIG = {
           <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" class="form-input">
         </div>
         <div>
-          <label for="asunto" class="block text-sm text-ink-300 mb-1.5 font-medium">Asunto</label>
-          <input type="text" id="asunto" name="asunto" placeholder="Información sobre clases" class="form-input">
+          <label for="interes" class="block text-sm text-ink-300 mb-1.5 font-medium">Clase de interés</label>
+          <select id="interes" name="interes" class="form-input">
+            <option value="">Selecciona una opción</option>
+            <option>Kung Fu Tradicional</option>
+            <option>Sanda</option>
+            <option>Defensa Personal</option>
+            <option>Kung Fu Infantil</option>
+            <option>Defensa Personal Femenina</option>
+            <option>Prueba / información general</option>
+          </select>
         </div>
+      </div>
+      <div>
+        <label for="asunto" class="block text-sm text-ink-300 mb-1.5 font-medium">Asunto</label>
+        <input type="text" id="asunto" name="asunto" placeholder="Información sobre clases" class="form-input">
       </div>
       <div>
         <label for="mensaje" class="block text-sm text-ink-300 mb-1.5 font-medium">Mensaje</label>
@@ -1043,7 +1096,8 @@ const CONFIG = {
           Enviar Mensaje
         </button>
       </div>
-      <p id="form-status" class="text-center text-sm hidden"></p>
+      <p class="text-center text-xs text-ink-500">Al enviar este formulario aceptas que te contactemos para responder a tu consulta sobre kung fu en Sevilla.</p>
+      <p id="form-status" class="text-center text-sm hidden" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -1588,20 +1642,26 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ================================================================
-  // FORMULARIO
+  // FORMULARIO — Netlify Forms
   // ================================================================
   const form = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
+  const params = new URLSearchParams(window.location.search);
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  if (params.get('form') === 'ok') {
     formStatus.classList.remove('hidden');
     formStatus.className = 'text-center text-sm text-gold-400 mt-4';
     formStatus.textContent = '¡Mensaje enviado correctamente! Te contactaremos pronto.';
-    form.reset();
-    setTimeout(() => {
-      formStatus.classList.add('hidden');
-    }, 5000);
+    if (window.history.replaceState) {
+      const cleanURL = `${window.location.pathname}${window.location.hash || '#contacto'}`;
+      window.history.replaceState({}, document.title, cleanURL);
+    }
+  }
+
+  form.addEventListener('submit', () => {
+    formStatus.classList.remove('hidden');
+    formStatus.className = 'text-center text-sm text-gold-400 mt-4';
+    formStatus.textContent = 'Enviando mensaje...';
   });
 
   // ================================================================
