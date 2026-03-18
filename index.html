@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centro Yuanfen Kung Fu Sevilla — Artes Marciales Chinas</title>
+<meta name="description" content="Escuela de Kung Fu tradicional en Sevilla. Clases de Tang Lang Quan, Sanda, Defensa Personal, Kung Fu Infantil y Defensa Personal Femenina. ¡Ven a conocernos!">
+<meta property="og:title" content="Centro Yuanfen Kung Fu Sevilla">
+<meta property="og:description" content="Descubre el tesoro de las artes marciales chinas. Clases para todas las edades en Sevilla.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kungfusevilla.net">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        gold: {
+          50:  '#FFF9E6',
+          100: '#FFF0BF',
+          200: '#FFE080',
+          300: '#FFD040',
+          400: '#D4AF37',
+          500: '#B8960F',
+          600: '#9A7B00',
+          700: '#7A6200',
+          800: '#5C4A00',
+          900: '#3D3100',
+        },
+        ink: {
+          50:  '#f5f5f4',
+          100: '#e7e5e4',
+          200: '#d6d3d1',
+          300: '#a8a29e',
+          400: '#78716c',
+          500: '#57534e',
+          600: '#44403c',
+          700: '#292524',
+          800: '#1c1917',
+          900: '#0c0a09',
+          950: '#050403',
+        },
+        crimson: {
+          500: '#8B0000',
+          600: '#6B0000',
+          700: '#4A0000',
+        }
+      },
+      fontFamily: {
+        display: ['"Cinzel"', 'Georgia', 'serif'],
+        body: ['"Inter"', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<!-- Fuentes -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+<!-- AOS (Animate on Scroll) -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<style>
+  /* ============================================================
+     BASE
+     ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #1c1917;
+    background-color: #0c0a09;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cinzel', Georgia, serif;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  img { display: block; max-width: 100%; height: auto; }
+
+  a, button {
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.3);
+    color: #1c1917;
+  }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(12, 10, 9, 0.85) 0%,
+      rgba(12, 10, 9, 0.6) 40%,
+      rgba(12, 10, 9, 0.4) 100%
+    );
+  }
+
+  /* ============================================================
+     SECCIONES
+     ============================================================ */
+  .section-dark  { background: #0c0a09; color: #e7e5e4; }
+  .section-gold  { background: linear-gradient(135deg, #D4AF37 0%, #B8960F 100%); color: #1c1917; }
+  .section-light { background: #f5f5f4; color: #1c1917; }
+
+  /* ============================================================
+     NAVEGACIÓN
+     ============================================================ */
+  .nav-scrolled {
+    background: rgba(12, 10, 9, 0.95) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .nav-link {
+    position: relative;
+    color: #e7e5e4;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.25rem 0;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #D4AF37;
+    transition: width 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  .nav-link:hover { color: #D4AF37; }
+
+  /* ============================================================
+     TARJETAS DE DISCIPLINA
+     ============================================================ */
+  .discipline-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .discipline-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  .discipline-card img {
+    transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .discipline-card:hover img {
+    transform: scale(1.05);
+  }
+
+  /* ============================================================
+     FORMULARIO
+     ============================================================ */
+  .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 0.5rem;
+    color: #e7e5e4;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9375rem;
+    transition: border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .form-input::placeholder { color: #78716c; }
+  .form-input:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+  }
+
+  /* ============================================================
+     RESEÑAS / GOOGLE REVIEWS
+     ============================================================ */
+  .review-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: border-color 300ms ease, transform 300ms ease;
+  }
+  .review-card:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+  }
+  .star { color: #D4AF37; }
+
+  /* ============================================================
+     BOTÓN CTA
+     ============================================================ */
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, #D4AF37, #B8960F);
+    color: #0c0a09;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+    background: linear-gradient(135deg, #FFD040, #D4AF37);
+  }
+  .btn-gold:active {
+    transform: translateY(0);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background: transparent;
+    color: #D4AF37;
+    border: 2px solid #D4AF37;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn-outline:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-1px);
+  }
+
+  /* ============================================================
+     SEPARADOR DECORATIVO
+     ============================================================ */
+  .divider-gold {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #D4AF37, #FFD040);
+    border-radius: 2px;
+  }
+
+  /* ============================================================
+     MENÚ MÓVIL
+     ============================================================ */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: rgba(12, 10, 9, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 60;
+    transition: right 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 5rem 2rem 2rem;
+  }
+  .mobile-menu.open {
+    right: 0;
+  }
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 55;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease;
+  }
+  .mobile-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ============================================================
+     SCROLL REVEAL (CSS puro como fallback)
+     ============================================================ */
+  @supports (animation-timeline: scroll()) {
+    .fade-in-view {
+      opacity: 0;
+      animation: fade-in-scroll linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 100%;
+    }
+    @keyframes fade-in-scroll { to { opacity: 1; } }
+  }
+
+  /* ============================================================
+     SUBPAGE VIEW
+     ============================================================ */
+  #subpage-view {
+    display: none;
+  }
+  #subpage-view.active {
+    display: block;
+  }
+  #main-view.hidden-by-route {
+    display: none;
+  }
+
+  /* ============================================================
+     RESPONSIVE AJUSTES
+     ============================================================ */
+  @media (max-width: 768px) {
+    .hero-title { font-size: clamp(1.75rem, 5vw, 3rem) !important; }
+    .hero-subtitle { font-size: clamp(0.875rem, 2.5vw, 1.125rem) !important; }
+  }
+</style>
+</head>
+
+<body>
+
+<script>
+/* ================================================================
+   CONFIGURACIÓN EDITABLE — ZONA CENTRALIZADA
+   ================================================================
+   Aquí se concentran TODOS los datos editables de la web.
+   Modifica textos, imágenes, enlaces y datos sin tocar el HTML.
+   ================================================================ */
+const CONFIG = {
+
+  /* ---- DATOS DE LA ESCUELA ---- */
+  nombreEscuela: "Centro Yuanfen Kung Fu Sevilla",
+  subtitulo: "Descubre el Tesoro de las Artes Marciales Chinas",
+  lema: "Autodefensa, Forma Física y Desarrollo Personal",
+
+  /* ---- IMAGEN HERO ---- */
+  heroImagen: "./assets/kungfu-tradicional-full.jpg",
+
+  /* ---- LOGO ---- */
+  logoImagen: "./assets/logo.png",
+  letrasLogo: "./assets/letras-logo.png",
+
+  /* ---- INTRODUCCIÓN ---- */
+  introTexto: "Las artes marciales chinas no son tan solo un excelente sistema de defensa personal, es un arte completo que mejora notablemente nuestra salud física y mental. Para su aprendizaje solo se requiere una firme voluntad, ya que sus variadas facetas hacen que pueda ser practicado por toda persona sin importar su edad o condición física.",
+
+  /* ---- QUÉ ES KUNG FU ---- */
+  queEsKungFu: {
+    titulo: "¿Qué es Kung Fu?",
+    parrafo1: "Kung-fu, Gongfu o Gung Fu 功夫 (pīn yīn: gōngfu) es un término bastante conocido, empleado de forma general, para referirse a las Artes Marciales provenientes de China. Estas a su vez se dividen en estilos, como por ejemplo estilo Shaolin, estilo Wing Chun, Choy Lee Fat, etc. En nuestro caso, estilo Tang Lang Quan (puño de la mantis religiosa).",
+    parrafo2: "Nuestra Escuela utiliza Kung Fu, principalmente por su significado original, que es algo diferente, no necesariamente marcial: se refiere a la perfección en alguna habilidad gracias al trabajo y al tiempo invertido en su desarrollo."
+  },
+
+  /* ---- HORARIOS (DATOS REALES de kungfusevilla.net/horarios/) ---- */
+  horarios: {
+    titulo: "Horario y Cuotas",
+    imagen: "./assets/sanda-full.jpg",
+    clases: [
+      { dia: "Lunes",     hora: "10:00 - 11:30", tipo: "Kung Fu Tradicional" },
+      { dia: "Lunes",     hora: "17:00 - 18:00", tipo: "Kung Fu Infantil (9 a 12 años)" },
+      { dia: "Lunes",     hora: "18:00 - 19:00", tipo: "Kung Fu Juveniles" },
+      { dia: "Lunes",     hora: "19:00 - 20:30", tipo: "Kung Fu Tradicional" },
+      { dia: "Lunes",     hora: "20:30 - 22:00", tipo: "Kung Fu Tradicional" },
+      { dia: "Martes",    hora: "10:00 - 11:30", tipo: "Sanda" },
+      { dia: "Martes",    hora: "17:00 - 18:00", tipo: "Kung Fu Infantil (4 a 8 años)" },
+      { dia: "Martes",    hora: "18:00 - 19:00", tipo: "Sanda / Defensa Personal Juveniles" },
+      { dia: "Martes",    hora: "19:00 - 20:30", tipo: "Defensa Personal" },
+      { dia: "Martes",    hora: "20:30 - 22:00", tipo: "Sanda" },
+      { dia: "Miércoles", hora: "10:00 - 11:30", tipo: "Kung Fu Tradicional" },
+      { dia: "Miércoles", hora: "17:00 - 18:00", tipo: "Kung Fu Infantil (9 a 12 años)" },
+      { dia: "Miércoles", hora: "18:00 - 19:00", tipo: "Kung Fu Juveniles" },
+      { dia: "Miércoles", hora: "19:00 - 20:30", tipo: "Kung Fu Tradicional" },
+      { dia: "Miércoles", hora: "20:30 - 22:00", tipo: "Kung Fu Tradicional" },
+      { dia: "Jueves",    hora: "10:00 - 11:30", tipo: "Sanda" },
+      { dia: "Jueves",    hora: "17:00 - 18:00", tipo: "Kung Fu Infantil (4 a 8 años)" },
+      { dia: "Jueves",    hora: "18:00 - 19:00", tipo: "Sanda / Defensa Personal Juveniles" },
+      { dia: "Jueves",    hora: "19:00 - 20:30", tipo: "Defensa Personal" },
+      { dia: "Jueves",    hora: "20:30 - 22:00", tipo: "Sanda" },
+      { dia: "Viernes",   hora: "10:00 - 11:30", tipo: "Entrenamiento Mixto (Kung Fu / Sanda)" },
+      { dia: "Viernes",   hora: "17:00 - 18:00", tipo: "Infantil (Clase Mixta)" },
+      { dia: "Viernes",   hora: "18:00 - 19:00", tipo: "Kung Fu / Sanda / Def. Personal Juveniles" },
+      { dia: "Viernes",   hora: "19:00 - 21:00", tipo: "Entrenamiento Mixto (Kung Fu / Sanda / Def. Personal)" },
+    ],
+    notaHorario: "Los horarios pueden variar. Contáctanos para confirmar disponibilidad.",
+    /* ---- CUOTAS (DATOS REALES de kungfusevilla.net/tarifas/) ---- */
+    cuotas: [
+      { nombre: "Kung Fu Tradicional (Tang Lang Quan)", precio: "45 €/mes",  detalle: "Mensualidad por disciplina" },
+      { nombre: "Sanda",                                precio: "45 €/mes",  detalle: "Mensualidad por disciplina" },
+      { nombre: "Defensa Personal",                     precio: "45 €/mes",  detalle: "Mensualidad por disciplina" },
+      { nombre: "Kung Fu Infantil",                     precio: "45 €/mes",  detalle: "Mensualidad por disciplina" },
+      { nombre: "Pase a todas las clases",              precio: "55 €/mes",  detalle: "Acceso completo a todas las disciplinas" },
+      { nombre: "Matrícula",                            precio: "35 €",      detalle: "Pago único de inscripción" },
+    ],
+    notaCuotas: "Cuota de mantenimiento de 15 € si algún mes no puedes asistir, para no perder plaza ni matrícula. Descuentos por antigüedad y pago anual disponibles."
+  },
+
+  /* ---- DISCIPLINAS (DATOS REALES de kungfusevilla.net) ---- */
+  disciplinas: [
+    {
+      id: "kung-fu-tradicional",
+      nombre: "Kung Fu Tradicional",
+      subtitulo: "Tang Lang Quan — Estilo Mantis Religiosa",
+      descripcion: "Táng Láng Quán (puño de la mantis religiosa) es un estilo de autodefensa que se caracteriza por imitar la ferocidad del insecto que da nombre al estilo. Encadena ataques rápidos y utiliza una energía ondulante para ganar contundencia.",
+      imagen: "./assets/kungfu-tradicional-full.jpg",
+      urlOficial: "https://kungfusevilla.net/kung-fu-tradicional/",
+      contenidoCompleto: {
+        intro: "Está compuesto por técnicas que van desde evidentes puños y patadas; a derribos, luxaciones y palancas de mayor complejidad. En su estudio se incluye el manejo de las armas tradicionales (palos, espadas, lanzas, etc). Originalmente el boxeo de la mantis religiosa fue creado por Wang Lang, con el paso del tiempo los distintos maestros crearon a su vez otros sub-estilos de este arte.",
+        descripcionLarga: "Táng láng quán (puño de la mantis religiosa), es un estilo de autodefensa, famoso entre las Artes Marciales Chinas. Se caracteriza por imitar la ferocidad del insecto que da nombre al estilo, encadena ataques rápidos y utiliza una energía ondulante para ganar contundencia.",
+        filosofia: "No somos un gimnasio, no nos limitamos al entrenamiento físico y marcial, lo que aquí conseguimos es para llevarlo de por vida. Pero primero \"hay que comer amargo\".",
+        objetivos: [
+          "Desarrollo del físico: fuerza, resistencia, velocidad y flexibilidad.",
+          "Aprendizaje de un sistema de combate tradicional, con un rico legado cultural.",
+          "Fortalecimiento del carácter, actitud y energía interna."
+        ],
+        comoSeEntrena: "El primer paso del aprendizaje, son las estructuras o posiciones básicas (ba shi), que nos darán la raíz y cimientos necesarios para pasar a las formas (Tao Lu), que son encadenamientos de técnicas donde se simula un combate contra uno o varios adversarios.\n\nComo todas las clases de nuestra escuela, los grupos son reducidos, la enseñanza y nivel se adaptan lo más posible a cada persona. Trabajo individual y de pareja, golpeo a sacos y escudos, sumado a la preparación física, nos van poniendo a punto para dominar las técnicas y tácticas básicas.",
+        ctaTexto: "Comienza a entrenar un estilo de kung fu tradicional completo y efectivo, explora el máximo de tus capacidades!"
+      }
+    },
+    {
+      id: "sanda",
+      nombre: "Sanda",
+      subtitulo: "Combate Deportivo Chino",
+      descripcion: "Sanda literalmente significa \"golpe libre\". Actualmente es una disciplina deportiva de pleno contacto, síntesis de técnicas de ataque y defensa que proceden de un gran número de estilos de wushu/kung fu.",
+      imagen: "./assets/sanda-full.jpg",
+      urlOficial: "https://kungfusevilla.net/sanda/",
+      contenidoCompleto: {
+        intro: "Sanda literalmente significa \"golpe libre\" antiguamente dentro del entrenamiento tradicional, era el momento de poner a prueba lo aprendido por medio del combate. Actualmente es una disciplina deportiva, de pleno contacto. Síntesis de técnicas de ataque y de defensa que proceden de un gran número de estilos de wushu/kung fu, se lucha utilizando técnicas de puño, piernas, proyecciones y derribos, utilizados con una estrategia y ritmo específico de las artes marciales chinas.",
+        descripcionLarga: "Es una modalidad deportiva, que a la vez permite el trabajo y puesta en práctica de gran parte de las técnicas de kung fu tradicional, por su puesto, con normas y reglamentos que facilitan un combate potente pero con gran seguridad para los/las combatientes.",
+        objetivos: [
+          "Mejora de todas las capacidades físicas y control del estrés mental.",
+          "Entrenar una disciplina de pleno contacto, en un entorno de seguridad y respeto.",
+          "Mayor seguridad en las capacidades de combate, tanto deportivas como de defensa personal."
+        ],
+        paraQueSirve: "El entrenamiento de Sanda mejora la salud física y mental. El Sanda mejora la forma física general, desarrolla fuerza, resistencia, flexibilidad y coordinación.\n\nLa práctica de combate y el entrenamiento de sus habilidades, ayuda a reducir el estrés y la ansiedad, mejorar la autoestima, la autoconfianza y la capacidad de superación. El Sanda es también un excelente y efectivo método de defensa personal.\n\nLa práctica de Sanda permite también el acceso a competiciones de diferente nivel, que nos ayudan en el progreso deportivo y personal.\n\nEl entrenamiento de Sanda es muy exigente, es efectivo para mejorar la forma física y la autoestima. Es una manera didáctica y divertida de aprender una habilidad útil, en un entorno seguro y de compañerismo. El entrenamiento marcial, requiere siempre del respeto y confianza en el grupo para tener un crecimiento constante, puesto que continuamente nos exponemos a lesionar o ser lesionados, esto mejora nuestra conciencia, capacidad de control y relaciones sociales.",
+        comoSeEntrena: "El entrenamiento de Sanda comienza con el aprendizaje de las técnicas básicas de desplazamiento, puños, patadas y derribos. Para ello se realiza una ardua preparación física y técnica. Se trabaja en sombra (movimientos en el aire), golpeando sacos, paos/manoplas y practicando en parejas técnicas de golpeo y lucha, además de mucho sparring (combates de intensidad moderada), requiere tiempo y entrenamiento para asimilar las técnicas y desarrollar la habilidad física. Principalmente es necesario ganar experiencia en los ejercicios de combate, para que las técnicas aprendidas, puedan utilizarse de manera efectiva. Como siempre de una manera gradual acorde al progreso de cada persona.\n\nLas clases son en grupos reducidos, se sigue el progreso de cada persona de manera individual, no hay por qué sentir miedo o vergüenza de ser principiantes, la escuela es una familia que siempre cuida a su gente.",
+        ctaTexto: "Comienza a entrenar un deporte de pleno contacto, con el sabor del arte tradicional."
+      }
+    },
+    {
+      id: "defensa-personal",
+      nombre: "Defensa Personal",
+      subtitulo: "Preparación para Situaciones Reales",
+      descripcion: "Entrenamos las habilidades que pueden ayudarnos a proteger nuestra integridad o la de terceros. No es simplemente la destreza en combate, sino todas las habilidades defensivas, comenzando por la actitud y toma de conciencia.",
+      imagen: "./assets/defensa-personal-full.jpg",
+      urlOficial: "https://kungfusevilla.net/defensa-personal/",
+      contenidoCompleto: {
+        intro: "Entrenamos las habilidades que pueden ayudarnos a proteger nuestra integridad o la de terceros. No es simplemente la destreza en combate, sino todas las habilidades defensivas, comenzando por la actitud, toma de conciencia y por supuesto preparar al cuerpo como arma natural primordial.",
+        descripcionLarga: "Comienza con técnicas de relativa simplicidad, que no requieren tanto tiempo de trabajo de las bases para ser capaz de ponerlas en ejecución, (como sucede en el arte tradicional o deportivo). Igualmente, se necesita constancia y mucho trabajo para que esto sea efectivo.",
+        objetivos: [
+          "Entender y desarrollar nuestras capacidades defensivas, físicas y mentales.",
+          "Entrenar el físico como arma natural primordial.",
+          "Estudiar técnicas y tácticas útiles en mi realidad personal.",
+          "Mejorar el control emocional y de estrés en situaciones adversas.",
+          "Conseguir mayor seguridad y asertividad en contextos de violencia."
+        ],
+        paraQueSirve: "Aunque el principal objetivo de la defensa personal, es lidiar con situaciones de violencia, donde nuestra integridad o la de terceros, está en peligro, la práctica aporta muchos más beneficios.\n\nMejora la salud ya que su entrenamiento físico intenso nos aporta mayor fuerza, agilidad y resistencia. Se potencia notablemente la autoestima y se gana en seguridad con cada evolución del entrenamiento. Mejora notablemente nuestra disciplina y control del estrés en situaciones cotidianas.\n\nEl contexto de la escuela marcial, aporta también un buen grupo de trabajo, y un entorno seguro, donde las personas cuidan unas de otras en cada clase.\n\nDefensa Personal, Salud Física, Salud Mental Y Desarrollo Personal.",
+        comoSeEntrena: "Como todas las clases de nuestra escuela, los grupos son reducidos, la enseñanza y nivel se adaptan lo más posible a cada persona.\n\nTrabajo individual y de pareja, golpeo a sacos y escudos, sumado a la preparación física, nos van poniendo a punto para dominar las técnicas y tácticas básicas.\n\nSe aprenden técnicas para defensa tanto de pie como desde el suelo, de lo más simple a lo más complejo de manera gradual.\n\nExisten dinámicas de pareja y grupales para entrenar poniendo a prueba lo aprendido, se realiza de manera habitual, un trabajo mental sobre las teorías y estrategias defensivas. Y para que el entrenamiento sea más efectivo hay días dedicados al combate (sparring) para ganar destreza, confianza y autoconocimiento de nuestras capacidades.\n\nNota: Es importante entender que no existen \"técnicas mágicas\" que funcionen sin entrenamiento.",
+        ctaTexto: "Ven a entrenar tus capacidades defensivas en un entorno seguro, familiar y divertido."
+      }
+    },
+    {
+      id: "kung-fu-infantil",
+      nombre: "Kung Fu Infantil",
+      subtitulo: "Artes Marciales para los Más Jóvenes",
+      descripcion: "El programa de kung fu infantil sigue la guía del estilo Tang Lang Quan, de Shandong, combina entrenamiento tradicional con juegos y didácticas modernas.",
+      imagen: "./assets/kungfu-infantil-full.jpg",
+      urlOficial: "https://kungfusevilla.net/kung-fu-infantil/",
+      contenidoCompleto: {
+        intro: "Kung fu/Wushu es el nombre que usamos para las artes marciales chinas, su entrenamiento aporta grandes beneficios, no son sólo un sistema de defensa personal, es una disciplina completa que nos desarrolla física y mentalmente.\n\nEn su estudio se incluye la práctica de combate, entrenamiento de formas, preparación física, manejo de las armas tradicionales (Palos, espadas, lanzas, etc.) y concentración mental.",
+        descripcionLarga: "El programa de kung fu infantil sigue la guía del estilo Tang Lang Quan, de Shandong, combina entrenamiento tradicional con juegos y didácticas modernas, así, niños y niñas aprenden a dominar y sacar el máximo de su cuerpo, al mismo tiempo que deben seguir normas lógicas de respeto y conducta, propias de la tradición marcial.",
+        objetivos: [
+          "Salud",
+          "Autoestima",
+          "Fortaleza",
+          "Confianza",
+          "Disciplina y diversión"
+        ],
+        objetivosDetalle: "Practicar Kung fu en edad temprana fortalece la confianza y la autoestima, esto es porque en las clases se adquieren nuevas habilidades y, trabajando junto a más estudiantes, tienen la oportunidad de desarrollar y demostrar sus progresos mediante ejercicios y dinámicas creadas para ello, lo cual refuerza sus capacidades.\n\nLa enseñanza de las artes marciales chinas sigue un programa estructurado con el que aprenden a superarse y conseguir objetivos, así como a tolerar la frustración cuando el camino se pone difícil.\n\nEl respeto es una parte fundamental de las artes marciales tanto para profesores como para sus iguales. Aprenden a escuchar y seguir instrucciones para adquirir nuevos movimientos y habilidades.\n\nEl kung fu infantil aporta un cálido sentido de pertenencia. Aunque gran parte del Kung Fu / Wushu se practica de forma individual, el trabajo en equipo es esencial. Se requieren muchos ejercicios en pareja en donde la confianza es vital, la escuela funciona como una familia, esto crea lazos y amistades duraderas.\n\nGolpear, patear, rodar o luchar, es parte de la naturaleza humana. Las artes marciales brindan un entorno seguro para hacerlo de la manera correcta, sin violencia, se enseña mediante un código de conducta, a canalizar correctamente esta energía, dando así efectivas herramientas para resolver conflictos de manera pacífica.\n\nEn resumen, el kung fu/wushu es una disciplina que permite a niños, niñas y jóvenes mantenerse en forma, desarrollar habilidades físicas, fomentar valores y adquirir herramientas para resolver conflictos de manera efectiva. Practicar artes marciales contribuye a un crecimiento integral y saludable, promoviendo la confianza, la constancia, el respeto y la superación personal.",
+        paraQueSirve: "Defensa Personal, Salud Física, Salud Mental Y Desarrollo Personal.",
+        comoSeEntrena: "Aunque las artes marciales chinas son principalmente sistemas de combate, en las clases infantiles nos centramos primero en habilidades físicas básicas, como son coordinación, equilibrio, flexibilidad, fuerza, etc. Pero dándole mayor importancia al desarrollo de habilidades sociales y comprensión de las normas de conducta necesarias para las artes marciales, siguiendo el código WUDE (ética marcial).\n\nLas artes marciales, no son simplemente un deporte, deben aprenderse junto con valores de responsabilidad y buen hacer.\n\nDespués de esta primera etapa, el entrenamiento va subiendo en dificultad y nivel.\n\nEn las clases aprenderán, estructuras de piernas y brazos para fortalecimiento integral, patadas puños y manejo de armas tradicionales. Parte del trabajo es individual y otra parte es en parejas o grupos, también, gradualmente se van golpeando escudos y sacos de entrenamiento, siempre cuidando que el físico y la mente se desarrollen de forma saludable.\n\nExiste la posibilidad de competiciones oficiales como herramienta de motivación, pero nunca como el principal objetivo del entrenamiento.",
+        ctaTexto: "Ser fuerte es un largo camino, vale la pena empezar a transitarlo!"
+      }
+    },
+    {
+      id: "defensa-personal-femenina",
+      nombre: "Defensa Personal Femenina",
+      subtitulo: "Talleres Intensivos",
+      descripcion: "Cursos intensivos de 3 horas diseñados para despertar y practicar habilidades defensivas latentes, divididos en tres niveles progresivos.",
+      imagen: "./assets/defensa-femenina-full.jpg",
+      urlOficial: "https://kungfusevilla.net/defensa-personal-femenina/",
+      contenidoCompleto: {
+        intro: "Son cursos específicamente diseñados para, en su corta duración (3 hs), despertar y practicar esas habilidades latentes en cada una, transmitiendo la idea de que a nivel defensivo, \"todas las personas\" podemos igualarnos. El método de trabajo es más práctico que teórico, se trabaja de manera gradual, técnicas de defensa y golpeo sencillas, hasta llegar a situaciones de alto estrés, nos gusta garantizar que en la finalización del curso, cada participante sabrá aplicar de manera efectiva y real lo aprendido. Mentiría mucho al decir que esto se logra sin sudar…",
+        objetivos: [
+          "Lograr habilidades defensivas básicas, útiles en las situaciones más comunes.",
+          "Tomar conciencia de las capacidades propias.",
+          "Mejorar la autoconfianza y seguridad personal.",
+          "Lograr mejor control de nuestra mente en situaciones de estrés.",
+          "Obtener mayor información para combatir la violencia de género.",
+          "Y no menos importante: ¡¡Divertirse!!"
+        ],
+        niveles: [
+          {
+            nombre: "Nivel 1",
+            descripcion: "Es el trabajo principal y general donde se aprenden las bases sobre la reacción y defensa agresiva, golpeos básicos, escapes y toma de conciencia sobre las capacidades individuales. En este curso se trabaja más sobre la actitud que sobre la técnica."
+          },
+          {
+            nombre: "Nivel 2",
+            descripcion: "Escapes desde el suelo, \"cuando ya estamos con el agresor encima\". Este curso difiere totalmente del nivel 1, ya que aquí la técnica pasa a primer plano, se trabajan las principales estrategias de escape y control ante esta horrible situación. En esta etapa es más difícil poner inmediatamente en práctica lo aprendido, aunque lo haremos durante el curso, se debe seguir la práctica en casa para obtener buenos resultados. Aconsejamos apuntarse con una compañera de práctica."
+          },
+          {
+            nombre: "Nivel 3",
+            descripcion: "Se une poner en práctica bajo presión los dos niveles anteriores. Sumamos armas improvisadas (llaves, ropa, sillas, etc) y estrategias para ayudar a alguien más. En este curso se ven también situaciones concretas dónde la técnica es clave para salir, une la técnica y el instinto."
+          }
+        ],
+        reflexion: "La capacidad de auto defenderse es natural de todo ser, todas las personas tenemos en mayor o menor medida, capacidades físicas suficientes, para como mínimo, ser tomadas con respeto por nuestros iguales. El desarrollo de estas habilidades ocurre de manera gradual mediante el juego y la utilización del cuerpo en nuestro crecimiento. Desafortunadamente, injustas normas sociales han apartado al género femenino en gran medida del deporte y los \"juegos bruscos\", provocando así, con respecto al género masculino, una seria desventaja en confrontaciones físicas, que no solo se resume en la diferencia de fuerza. Poco a poco, se acepta la idea de la desventaja, con ella se le hace espacio al miedo y esto nos transforma en víctimas potenciales.",
+        porQue: "Lo que pretendemos con cursos exclusivos es facilitar el acercamiento de un colectivo que a veces duda por no contar con garantías de respeto y seguridad.",
+        ctaTexto: "Es hora de que la calle sea de todxs!"
+      }
+    }
+  ],
+
+  /* ---- MÁS INFORMACIÓN ---- */
+  masInfo: {
+    titulo: "Más Información",
+    bloques: [
+      {
+        titulo: "Nuestra Filosofía",
+        texto: "No somos solo un gimnasio. No nos limitamos al entrenamiento físico y marcial. Lo que aquí conseguimos es más profundo, como dice un proverbio chino: 'Hay que comer amargo'. El camino del Kung Fu es un viaje de autodescubrimiento que transforma cuerpo, mente y espíritu.",
+        imagen: "./assets/defensa-personal-full.jpg"
+      },
+      {
+        titulo: "Nuestra Comunidad",
+        texto: "Tenemos una variada oferta de clases y estilos. La mejor manera de saber cuál es 'la que mejor me viene' es simplemente acercarse y conocernos. Responderemos a todas las dudas sin ningún compromiso. Aquí encontrarás compañeros maravillosos dispuestos a ayudar, en un ambiente muy agradable y familiar.",
+        imagen: "./assets/kungfu-infantil-full.jpg"
+      }
+    ]
+  },
+
+  /* ---- FACEBOOK ---- */
+  facebookURL: "https://www.facebook.com/yuanfenkungfu",
+  facebookNombrePagina: "Yuanfen Kung Fu Sevilla",
+
+  /* ---- GOOGLE REVIEWS ---- */
+  googleReviews: {
+    usarAPI: false,
+    apiKey: "TU_API_KEY_AQUI",
+    placeId: "ChIJafF_XDXEYA0Rn_h1-H8meKs",
+    enlaceGoogleMaps: "https://www.google.com/maps/place/Centro+Yuanfen+Kung+fu/@37.3856353,-6.0084043,17z/",
+    puntuacionMedia: 5.0,
+    totalResenas: 38,
+    resenasManuales: [
+      {
+        autor: "Carlos Pepe",
+        fecha: "noviembre 2024",
+        estrellas: 5,
+        texto: "He tenido que poner 5 estrellas bajo coerción física. Ahora en serio, Jero es una maravillosa persona y un magnífico maestro. La escuela es un lugar excepcional donde se respira buen ambiente, compañerismo y dedicación."
+      },
+      {
+        autor: "May Acevedo",
+        fecha: "septiembre 2024",
+        estrellas: 5,
+        texto: "Centro de entrenamiento magnífico. Llevo más de tres años practicando Kung Fu tradicional estilo Mantis. Gran Maestro Jero, disciplinario pero comprensivo, sacando lo máximo de ti. Los compañeros son maravillosos, dispuestos a ayudar. 100% recomendable."
+      },
+      {
+        autor: "D. V.",
+        fecha: "septiembre 2024",
+        estrellas: 5,
+        texto: "Un Camino de Crecimiento Completo y Enriquecedor. Llevo un año y medio asistiendo a esta escuela de Kung Fu. El ambiente es extremadamente acogedor y familiar: te integras de inmediato y te sientes parte del grupo desde el primer día."
+      },
+      {
+        autor: "Salva Díaz",
+        fecha: "septiembre 2024",
+        estrellas: 5,
+        texto: "Solo doy cinco estrellas porque no es posible otorgar seis. Una escuela que te cambia la vida, humilde, sin estridencias, con un afán continuo de crecimiento. Compañeros inmejorables. Camaradería sana, buen rollo, ambiente seguro y totalmente inclusivo."
+      },
+      {
+        autor: "Gonzalo Ollo",
+        fecha: "septiembre 2024",
+        estrellas: 5,
+        texto: "Un gimnasio espectacular que logra combinar la disciplina del wushu con un ambiente amigable y acogedor. El maestro Jero transmite su pasión y conocimiento de forma excepcional."
+      },
+      {
+        autor: "Laura León",
+        fecha: "septiembre 2024",
+        estrellas: 5,
+        texto: "Te vas a poner fuerte, vas a aprender y te vas a reír. Las cosas importantes hay que trabajarlas; pero cuando lo haces en un ambiente sano y acogedor, se disfruta mucho más el camino."
+      }
+    ]
+  },
+
+  /* ---- CONTACTO ---- */
+  contacto: {
+    email: "yuanfenkungfu@gmail.com",
+    telefono: "+34 617 76 92 32",
+    telefonoDisplay: "617 76 92 32",
+    direccion: "San Vicente de Paúl, 4",
+    ciudad: "41010 Sevilla",
+    enlaceMapa: "https://www.google.com/maps/dir//Centro+Yuanfen+Kung+fu,+San+Vicente+de+Paul,+4,+41010+Sevilla/@37.3856353,-6.0084043,21z/",
+    instagram: "",
+    facebook: "https://www.facebook.com/yuanfenkungfu",
+    youtube: "",
+    tiktok: "",
+  }
+};
+</script>
+
+<!-- ================================================================
+     NAVEGACIÓN SUPERIOR
+     ================================================================ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: transparent;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-3 shrink-0" onclick="navigateHome()">
+        <img id="nav-logo" src="./assets/logo.png" alt="Yuanfen Kung Fu" class="h-10 lg:h-14 w-auto">
+      </a>
+
+      <!-- Links desktop -->
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#inicio" class="nav-link" onclick="navigateHome()">Inicio</a>
+        <a href="#disciplinas" class="nav-link" onclick="navigateHome()">Disciplinas</a>
+        <a href="#horarios" class="nav-link" onclick="navigateHome()">Horarios y Cuotas</a>
+        <a href="#mas-info" class="nav-link" onclick="navigateHome()">Más Información</a>
+        <a href="#resenas" class="nav-link" onclick="navigateHome()">Reseñas</a>
+        <a href="#contacto" class="nav-link" onclick="navigateHome()">Contacto</a>
+      </div>
+
+      <!-- Botón menú móvil -->
+      <button id="menu-toggle" class="lg:hidden text-gold-400 p-2 relative z-10" aria-label="Abrir menú">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Menú móvil -->
+<div id="mobile-overlay" class="mobile-overlay"></div>
+<div id="mobile-menu" class="mobile-menu">
+  <button id="menu-close" class="absolute top-4 right-4 text-gold-400 p-2" aria-label="Cerrar menú">
+    <i data-lucide="x" class="w-6 h-6"></i>
+  </button>
+  <div class="flex flex-col gap-6">
+    <a href="#inicio" class="mobile-nav-link text-lg font-display text-gold-400 uppercase tracking-wider" onclick="navigateHome()">Inicio</a>
+    <a href="#disciplinas" class="mobile-nav-link text-lg font-display text-gold-400 uppercase tracking-wider" onclick="navigateHome()">Disciplinas</a>
+    <a href="#horarios" class="mobile-nav-link text-lg font-display text-gold-400 uppercase tracking-wider" onclick="navigateHome()">Horarios y Cuotas</a>
+    <a href="#mas-info" class="mobile-nav-link text-lg font-display text-gold-400 uppercase tracking-wider" onclick="navigateHome()">Más Información</a>
+    <a href="#resenas" class="mobile-nav-link text-lg font-display text-gold-400 uppercase tracking-wider" onclick="navigateHome()">Reseñas</a>
+    <a href="#contacto" class="mobile-nav-link text-lg font-display text-gold-400 uppercase tracking-wider" onclick="navigateHome()">Contacto</a>
+  </div>
+  <div class="mt-auto pt-8 border-t border-gold-400/20">
+    <a href="#contacto" class="btn-gold w-full text-center justify-center text-sm" onclick="navigateHome()">Únete Ahora</a>
+  </div>
+</div>
+
+
+<!-- ================================================================
+     MAIN VIEW (all homepage sections)
+     ================================================================ -->
+<div id="main-view">
+
+<!-- ================================================================
+     HERO
+     ================================================================ -->
+<section id="inicio" class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img id="hero-bg" src="./assets/kungfu-tradicional-full.jpg"
+         alt="Centro Yuanfen Kung Fu Sevilla"
+         class="w-full h-full object-cover">
+  </div>
+  <div class="hero-overlay absolute inset-0"></div>
+  <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-400 to-transparent opacity-60"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-0 w-full">
+    <div class="max-w-3xl" data-aos="fade-up" data-aos-duration="1000">
+      <img src="./assets/logo.png" alt="Yuanfen Kung Fu" class="h-16 sm:h-32 lg:h-40 w-auto mb-4 sm:mb-6 drop-shadow-2xl">
+      <h1 id="hero-title" class="hero-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 leading-tight"
+          style="text-shadow: 0 2px 20px rgba(0,0,0,0.5);">
+        Centro Yuanfen<br>
+        <span class="text-gold-400">Kung Fu Sevilla</span>
+      </h1>
+      <p id="hero-subtitle" class="hero-subtitle text-lg sm:text-xl lg:text-2xl text-gold-200 mb-3 font-light tracking-wide"
+         data-aos="fade-up" data-aos-delay="200">
+        Descubre el Tesoro de las Artes Marciales Chinas
+      </p>
+      <p class="text-base sm:text-lg text-ink-200 mb-8 max-w-xl"
+         data-aos="fade-up" data-aos-delay="350">
+        Autodefensa, Forma Física y Desarrollo Personal
+      </p>
+      <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="500">
+        <a href="#contacto" class="btn-gold">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          Contáctanos
+        </a>
+        <a href="#disciplinas" class="btn-outline">
+          <i data-lucide="swords" class="w-4 h-4"></i>
+          Nuestras Clases
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <a href="#sobre-nosotros" class="text-gold-400 opacity-60 hover:opacity-100">
+      <i data-lucide="chevron-down" class="w-8 h-8"></i>
+    </a>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     SOBRE NOSOTROS / INTRODUCCIÓN
+     ================================================================ -->
+<section id="sobre-nosotros" class="section-dark py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div data-aos="fade-right">
+        <div class="divider-gold mb-6"></div>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6">
+          ¿Qué es <span class="text-gold-400">Kung Fu</span>?
+        </h2>
+        <p class="text-ink-300 mb-4 text-base leading-relaxed" id="texto-kungfu-1">
+          Kung-fu, Gongfu o Gung Fu 功夫 (pīn yīn: gōngfu) es un término bastante conocido, empleado de forma general, para referirse a las Artes Marciales provenientes de China. Estas a su vez se dividen en estilos, como por ejemplo estilo Shaolin, estilo Wing Chun, Choy Lee Fat, etc. En nuestro caso, estilo <strong class="text-gold-400">Tang Lang Quan</strong> (puño de la mantis religiosa).
+        </p>
+        <p class="text-ink-300 text-base leading-relaxed" id="texto-kungfu-2">
+          Nuestra Escuela utiliza Kung Fu, principalmente por su significado original, que es algo diferente, no necesariamente marcial: se refiere a la <strong class="text-gold-400">perfección en alguna habilidad</strong> gracias al trabajo y al tiempo invertido en su desarrollo.
+        </p>
+      </div>
+      <div data-aos="fade-left" class="relative">
+        <div class="rounded-xl overflow-hidden shadow-2xl border border-gold-400/10">
+          <img src="./assets/defensa-personal-full.jpg"
+               alt="Entrenamiento de Kung Fu en Sevilla"
+               class="w-full h-80 lg:h-96 object-cover">
+        </div>
+        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-gold-400/30 rounded-xl -z-10"></div>
+      </div>
+    </div>
+
+    <div class="mt-16 lg:mt-24 text-center max-w-3xl mx-auto" data-aos="fade-up">
+      <p id="intro-texto" class="text-lg text-ink-200 leading-relaxed italic">
+        "Las artes marciales chinas no son tan solo un excelente sistema de defensa personal, es un arte completo que mejora notablemente nuestra salud física y mental. Para su aprendizaje solo se requiere una firme voluntad, ya que sus variadas facetas hacen que pueda ser practicado por toda persona sin importar su edad o condición física."
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     DISCIPLINAS
+     ================================================================ -->
+<section id="disciplinas" class="section-dark py-20 lg:py-28 border-t border-ink-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="divider-gold mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+        Nuestras <span class="text-gold-400">Disciplinas</span>
+      </h2>
+      <p class="text-ink-300 max-w-2xl mx-auto">
+        Tenemos una variada oferta de clases y estilos. La mejor manera de saber cuál es la que mejor te viene es simplemente acercarte y conocernos.
+      </p>
+    </div>
+
+    <div id="disciplinas-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Las tarjetas se generan con JavaScript -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     HORARIO Y CUOTAS
+     ================================================================ -->
+<section id="horarios" class="section-light py-20 lg:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="divider-gold mx-auto mb-6" style="background: linear-gradient(90deg, #7A6200, #D4AF37);"></div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-ink-900 mb-4">
+        Horario y <span class="text-gold-600">Cuotas</span>
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-10 items-start">
+      <!-- Horarios -->
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-bold text-ink-800 mb-6 flex items-center gap-2">
+          <i data-lucide="calendar-days" class="w-5 h-5 text-gold-600"></i>
+          Horario de Clases
+        </h3>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-ink-100 mb-5">
+          <img src="./assets/horario-septiembre-2024.jpg"
+               alt="Horarios y tarifas del Centro Yuanfen Kung Fu Sevilla"
+               class="w-full h-auto">
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-ink-100">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-ink-900 text-gold-400">
+                <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Día</th>
+                <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Hora</th>
+                <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Clase</th>
+              </tr>
+            </thead>
+            <tbody id="horarios-tabla">
+              <!-- Se genera con JavaScript -->
+            </tbody>
+          </table>
+        </div>
+        <p id="nota-horario" class="mt-4 text-sm text-ink-400 italic">
+          Los horarios pueden variar. Contáctanos para confirmar disponibilidad.
+        </p>
+      </div>
+
+      <!-- Cuotas -->
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-bold text-ink-800 mb-6 flex items-center gap-2">
+          <i data-lucide="badge-euro" class="w-5 h-5 text-gold-600"></i>
+          Matrícula y Mensualidades
+        </h3>
+        <p class="text-ink-600 text-sm mb-5 leading-relaxed">Puedes elegir especializarte en una sola disciplina o optar por nuestro pase completo, que te da acceso a todas las clases.</p>
+        <div id="cuotas-lista" class="space-y-4">
+          <!-- Se genera con JavaScript -->
+        </div>
+        <p id="nota-cuotas" class="mt-6 text-sm text-ink-400 italic">
+          Cuota de mantenimiento de 15 € si algún mes no puedes asistir, para no perder plaza ni matrícula. Descuentos por antigüedad y pago anual disponibles.
+        </p>
+
+        <div class="mt-8">
+          <a href="#contacto" class="btn-gold" style="background: linear-gradient(135deg, #7A6200, #D4AF37); color: #fff;">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            Solicitar Información
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10" data-aos="fade-up">
+      <div class="bg-white rounded-xl shadow-lg border border-ink-100 p-6 sm:p-7">
+        <h4 class="text-lg sm:text-xl font-bold text-ink-900 mb-6 flex items-center gap-2">
+          <i data-lucide="badge-percent" class="w-5 h-5 text-gold-600"></i>
+          Condiciones del descuento y mantenimiento
+        </h4>
+
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6 text-sm text-ink-700 leading-relaxed">
+          <div class="rounded-lg border border-ink-100 bg-stone-50 p-5">
+            <h5 class="font-semibold text-ink-900 mb-3">Adultos</h5>
+            <p>A partir de su inscripción, deberán asistir o abonar de continuo todos los meses del curso (12 meses).</p>
+            <p class="mt-3">La mensualidad de agosto se reduce 10 €, debido a que, en dicho mes, la escuela cierra 15 días por descanso estival.</p>
+          </div>
+
+          <div class="rounded-lg border border-ink-100 bg-stone-50 p-5">
+            <h5 class="font-semibold text-ink-900 mb-3">Infantiles</h5>
+            <p>A partir de su inscripción, deberán asistir o abonar de continuo todos los meses del curso (11 meses; en agosto no hay clases de nivel infantil).</p>
+            <p class="mt-3">Durante el mes de julio las clases serán dos veces en semana en lugar de tres, por tanto, la mensualidad se reduce 10 €.</p>
+          </div>
+
+          <div class="rounded-lg border border-ink-100 bg-stone-50 p-5 md:col-span-2 xl:col-span-1">
+            <h5 class="font-semibold text-ink-900 mb-3">Otras condiciones</h5>
+            <ul class="list-disc pl-5 space-y-2 text-ink-700">
+              <li>Si por motivos ajenos a la escuela, algún mes no puede asistir a clase, se abonará una cuota de mantenimiento de 15 € para no perder plaza ni matrícula.</li>
+              <li>Las ausencias mayores a un mes, sin pago de la cuota de mantenimiento ni comunicación previa, causarán la baja automática de la matrícula, que deberá ser abonada al momento de reincorporarse a las clases.</li>
+              <li>El descuento por antigüedad es de 5 € mensuales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     MÁS INFORMACIÓN
+     ================================================================ -->
+<section id="mas-info" class="section-dark py-20 lg:py-28 border-t border-ink-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="divider-gold mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+        Más <span class="text-gold-400">Información</span>
+      </h2>
+    </div>
+
+    <div id="mas-info-bloques" class="space-y-16 lg:space-y-24">
+      <!-- Se genera con JavaScript -->
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     FACEBOOK
+     ================================================================ -->
+<section id="facebook" class="section-gold py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-ink-900 mb-4">
+      Síguenos en Facebook
+    </h2>
+    <p class="text-ink-700 mb-8 max-w-xl mx-auto">
+      Mantente al día con nuestras actividades, eventos, fotos y noticias.
+    </p>
+    <a id="facebook-link" href="https://www.facebook.com/yuanfenkungfu"
+       target="_blank" rel="noopener noreferrer"
+       class="inline-flex items-center gap-3 px-8 py-4 bg-ink-900 text-gold-400 rounded-xl font-display font-semibold text-sm uppercase tracking-wider hover:bg-ink-800 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+      <span id="facebook-nombre">Yuanfen Kung Fu Sevilla</span>
+    </a>
+    <p class="mt-4 text-sm text-ink-600">
+      <i data-lucide="external-link" class="w-3 h-3 inline-block mr-1"></i>
+      Se abrirá en una nueva pestaña
+    </p>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     GOOGLE REVIEWS
+     ================================================================ -->
+<section id="resenas" class="section-dark py-20 lg:py-28 border-t border-ink-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="divider-gold mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+        Lo Que Dicen <span class="text-gold-400">Nuestros Alumnos</span>
+      </h2>
+      <div class="flex items-center justify-center gap-3 mb-3">
+        <span class="text-3xl font-bold text-gold-400" id="review-rating">5.0</span>
+        <div class="flex gap-0.5" id="review-stars"></div>
+      </div>
+      <p class="text-ink-400 text-sm">
+        <span class="font-semibold text-ink-200" id="review-count">38</span> reseñas en
+        <a id="google-maps-link" href="#" target="_blank" rel="noopener noreferrer" class="text-gold-400 hover:underline">Google Maps</a>
+      </p>
+    </div>
+
+    <div id="reviews-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    <div class="text-center mt-10">
+      <a id="ver-resenas-link" href="#" target="_blank" rel="noopener noreferrer"
+         class="btn-outline text-sm">
+        <i data-lucide="star" class="w-4 h-4"></i>
+        Ver Todas las Reseñas en Google
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     FORMULARIO DE CONTACTO
+     ================================================================ -->
+<section id="contacto" class="section-dark py-20 lg:py-28 border-t border-ink-800">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="divider-gold mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+        <span class="text-gold-400">Contacto</span>
+      </h2>
+      <p class="text-ink-300 max-w-xl mx-auto">
+        ¿Tienes alguna pregunta? ¿Quieres probar una clase? Escríbenos y te responderemos lo antes posible.
+      </p>
+    </div>
+
+    <form id="contact-form" class="space-y-5 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="nombre" class="block text-sm text-ink-300 mb-1.5 font-medium">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" class="form-input">
+        </div>
+        <div>
+          <label for="correo" class="block text-sm text-ink-300 mb-1.5 font-medium">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required placeholder="tu@email.com" class="form-input">
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="telefono" class="block text-sm text-ink-300 mb-1.5 font-medium">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" class="form-input">
+        </div>
+        <div>
+          <label for="asunto" class="block text-sm text-ink-300 mb-1.5 font-medium">Asunto</label>
+          <input type="text" id="asunto" name="asunto" placeholder="Información sobre clases" class="form-input">
+        </div>
+      </div>
+      <div>
+        <label for="mensaje" class="block text-sm text-ink-300 mb-1.5 font-medium">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..." class="form-input resize-none"></textarea>
+      </div>
+      <div class="text-center pt-2">
+        <button type="submit" class="btn-gold text-sm">
+          <i data-lucide="send" class="w-4 h-4"></i>
+          Enviar Mensaje
+        </button>
+      </div>
+      <p id="form-status" class="text-center text-sm hidden"></p>
+    </form>
+  </div>
+</section>
+
+</div><!-- end #main-view -->
+
+
+<!-- ================================================================
+     SUBPAGE VIEW (discipline detail pages)
+     ================================================================ -->
+<div id="subpage-view">
+  <!-- Content rendered by JavaScript -->
+</div>
+
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="bg-ink-950 border-t border-ink-800 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div class="lg:col-span-2">
+        <img src="./assets/logo.png" alt="Yuanfen Kung Fu" class="h-16 w-auto mb-4">
+        <p class="text-ink-400 text-sm max-w-md leading-relaxed">
+          Escuela de artes marciales chinas tradicionales en Sevilla. Kung Fu estilo Tang Lang Quan (Mantis Religiosa). Clases para todas las edades y niveles.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-gold-400 font-display text-sm uppercase tracking-wider mb-4 font-semibold">Navegación</h4>
+        <ul class="space-y-2.5">
+          <li><a href="#inicio" class="text-ink-400 hover:text-gold-400 text-sm transition-colors" onclick="navigateHome()">Inicio</a></li>
+          <li><a href="#disciplinas" class="text-ink-400 hover:text-gold-400 text-sm transition-colors" onclick="navigateHome()">Disciplinas</a></li>
+          <li><a href="#horarios" class="text-ink-400 hover:text-gold-400 text-sm transition-colors" onclick="navigateHome()">Horarios y Cuotas</a></li>
+          <li><a href="#mas-info" class="text-ink-400 hover:text-gold-400 text-sm transition-colors" onclick="navigateHome()">Más Información</a></li>
+          <li><a href="#resenas" class="text-ink-400 hover:text-gold-400 text-sm transition-colors" onclick="navigateHome()">Reseñas</a></li>
+          <li><a href="#contacto" class="text-ink-400 hover:text-gold-400 text-sm transition-colors" onclick="navigateHome()">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-gold-400 font-display text-sm uppercase tracking-wider mb-4 font-semibold">Contacto</h4>
+        <ul class="space-y-3">
+          <li>
+            <a id="footer-email" href="mailto:yuanfenkungfu@gmail.com"
+               class="flex items-center gap-2 text-ink-400 hover:text-gold-400 text-sm transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-gold-400/60 shrink-0"></i>
+              <span>yuanfenkungfu@gmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a id="footer-tel" href="tel:+34617769232"
+               class="flex items-center gap-2 text-ink-400 hover:text-gold-400 text-sm transition-colors">
+              <i data-lucide="phone" class="w-4 h-4 text-gold-400/60 shrink-0"></i>
+              <span>617 76 92 32</span>
+            </a>
+          </li>
+          <li>
+            <a id="footer-dir" href="https://www.google.com/maps/dir//Centro+Yuanfen+Kung+fu,+San+Vicente+de+Paul,+4,+41010+Sevilla/@37.3856353,-6.0084043,21z/"
+               target="_blank" rel="noopener noreferrer"
+               class="flex items-start gap-2 text-ink-400 hover:text-gold-400 text-sm transition-colors">
+              <i data-lucide="map-pin" class="w-4 h-4 text-gold-400/60 shrink-0 mt-0.5"></i>
+              <span>San Vicente de Paúl, 4<br>41010 Sevilla</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex gap-3 mt-5" id="footer-redes"></div>
+      </div>
+    </div>
+
+    <div class="border-t border-ink-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p class="text-ink-500 text-xs">
+        &copy; <span id="footer-year"></span> Centro Yuanfen Kung Fu Sevilla. Todos los derechos reservados.
+      </p>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer"
+         class="text-ink-600 hover:text-ink-400 text-xs transition-colors">
+        Created with Perplexity Computer
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ================================================================
+     BANDA AMARILLA CON LOGO (debajo del footer)
+     ================================================================ -->
+<div class="w-full py-6" style="background-color: #ffde59;">
+  <div class="flex justify-center items-center">
+    <img src="./assets/logo.png" alt="Centro Yuanfen Kung Fu Sevilla" class="h-16 sm:h-20 w-auto">
+  </div>
+</div>
+
+
+<!-- ================================================================
+     JAVASCRIPT — LÓGICA Y RENDERIZADO
+     ================================================================ -->
+<script>
+
+/* ================================================================
+   SPA ROUTING — Hash-based navigation for discipline subpages
+   ================================================================ */
+function navigateHome() {
+  // Show main view, hide subpage
+  document.getElementById('main-view').classList.remove('hidden-by-route');
+  document.getElementById('subpage-view').classList.remove('active');
+  document.getElementById('subpage-view').innerHTML = '';
+}
+
+function navigateToDiscipline(disciplineId) {
+  const d = CONFIG.disciplinas.find(disc => disc.id === disciplineId);
+  if (!d) return;
+
+  // Update hash without triggering scroll
+  history.pushState(null, '', '#disciplina/' + disciplineId);
+
+  // Hide main, show subpage
+  document.getElementById('main-view').classList.add('hidden-by-route');
+  const subpageView = document.getElementById('subpage-view');
+  subpageView.classList.add('active');
+
+  // Build the subpage HTML
+  const cc = d.contenidoCompleto;
+  let sectionsHTML = '';
+
+  // Intro section
+  sectionsHTML += `
+    <p class="text-ink-200 text-lg leading-relaxed mb-6">${cc.intro.replace(/\n/g, '<br>')}</p>
+  `;
+  if (cc.descripcionLarga) {
+    sectionsHTML += `<p class="text-ink-300 leading-relaxed mb-8">${cc.descripcionLarga.replace(/\n/g, '<br>')}</p>`;
+  }
+  if (cc.filosofia) {
+    sectionsHTML += `<blockquote class="border-l-4 border-gold-400 pl-6 py-2 mb-8 italic text-ink-200 text-lg">${cc.filosofia}</blockquote>`;
+  }
+
+  // Objetivos
+  if (cc.objetivos && cc.objetivos.length) {
+    sectionsHTML += `
+      <div class="mb-10">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-5 font-display flex items-center gap-3">
+          <span class="w-10 h-10 rounded-lg bg-gold-400/20 flex items-center justify-center shrink-0">
+            <i data-lucide="target" class="w-5 h-5 text-gold-400"></i>
+          </span>
+          Objetivos
+        </h3>
+        <ul class="space-y-3">
+          ${cc.objetivos.map(obj => `
+            <li class="flex items-start gap-3">
+              <span class="mt-1.5 w-2 h-2 rounded-full bg-gold-400 shrink-0"></span>
+              <span class="text-ink-300 leading-relaxed">${obj}</span>
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+    `;
+  }
+
+  // Detalle de objetivos (kung fu infantil)
+  if (cc.objetivosDetalle) {
+    sectionsHTML += `<div class="mb-10 text-ink-300 leading-relaxed whitespace-pre-line">${cc.objetivosDetalle.replace(/\n\n/g, '</p><p class="mb-4 text-ink-300 leading-relaxed">')}</div>`;
+  }
+
+  // Niveles (defensa personal femenina)
+  if (cc.niveles && cc.niveles.length) {
+    sectionsHTML += `
+      <div class="mb-10">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-5 font-display">Los cursos están divididos en tres niveles</h3>
+        <div class="space-y-6">
+          ${cc.niveles.map((n, i) => `
+            <div class="bg-ink-800/50 rounded-xl p-6 border border-gold-400/10">
+              <h4 class="text-gold-400 font-display font-bold text-lg mb-2">${n.nombre}</h4>
+              <p class="text-ink-300 leading-relaxed">${n.descripcion}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  // ¿Para qué sirve?
+  if (cc.paraQueSirve) {
+    sectionsHTML += `
+      <div class="mb-10">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-5 font-display flex items-center gap-3">
+          <span class="w-10 h-10 rounded-lg bg-gold-400/20 flex items-center justify-center shrink-0">
+            <i data-lucide="sparkles" class="w-5 h-5 text-gold-400"></i>
+          </span>
+          ¿Para Qué Sirve?
+        </h3>
+        <div class="text-ink-300 leading-relaxed space-y-4">
+          ${cc.paraQueSirve.split('\n\n').map(p => `<p>${p}</p>`).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  // ¿Cómo se entrena?
+  if (cc.comoSeEntrena) {
+    sectionsHTML += `
+      <div class="mb-10">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-5 font-display flex items-center gap-3">
+          <span class="w-10 h-10 rounded-lg bg-gold-400/20 flex items-center justify-center shrink-0">
+            <i data-lucide="dumbbell" class="w-5 h-5 text-gold-400"></i>
+          </span>
+          ¿Cómo Se Entrena?
+        </h3>
+        <div class="text-ink-300 leading-relaxed space-y-4">
+          ${cc.comoSeEntrena.split('\n\n').map(p => `<p>${p}</p>`).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  // Reflexión (defensa personal femenina)
+  if (cc.reflexion) {
+    sectionsHTML += `
+      <div class="mb-10 bg-ink-800/30 rounded-xl p-6 border border-gold-400/10">
+        <p class="text-ink-300 leading-relaxed">${cc.reflexion}</p>
+      </div>
+    `;
+  }
+
+  // ¿Por qué? (defensa personal femenina)
+  if (cc.porQue) {
+    sectionsHTML += `
+      <div class="mb-10">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 font-display">¿Por qué defensa personal femenina?</h3>
+        <p class="text-ink-300 leading-relaxed">${cc.porQue}</p>
+      </div>
+    `;
+  }
+
+  subpageView.innerHTML = `
+    <section class="section-dark min-h-screen">
+      <!-- Hero de disciplina -->
+      <div class="relative h-72 sm:h-96 overflow-hidden">
+        <img src="${d.imagen}" alt="${d.nombre}" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/60 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 max-w-7xl mx-auto">
+          <a href="#disciplinas" onclick="navigateHome(); setTimeout(() => { document.getElementById('disciplinas').scrollIntoView({behavior:'smooth'}) }, 100); return false;"
+             class="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 text-sm font-medium mb-4 transition-colors">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            Volver a Disciplinas
+          </a>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display">${d.nombre}</h1>
+          <p class="text-gold-400 uppercase tracking-wider text-sm mt-2">${d.subtitulo}</p>
+        </div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        ${sectionsHTML}
+
+        <!-- CTA -->
+        ${cc.ctaTexto ? `
+        <div class="mt-12 text-center bg-gradient-to-r from-gold-400/10 via-gold-400/5 to-gold-400/10 rounded-2xl p-8 border border-gold-400/20">
+          <p class="text-lg text-ink-200 mb-6 font-display">${cc.ctaTexto}</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#contacto" onclick="navigateHome(); setTimeout(() => { document.getElementById('contacto').scrollIntoView({behavior:'smooth'}) }, 100); return false;"
+               class="btn-gold">
+              <i data-lucide="send" class="w-4 h-4"></i>
+              Inscríbete Ahora
+            </a>
+          </div>
+        </div>
+        ` : ''}
+      </div>
+    </section>
+  `;
+
+  // Scroll to top and re-init icons
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  lucide.createIcons();
+}
+
+// Handle browser back/forward
+window.addEventListener('popstate', () => {
+  handleRoute();
+});
+
+function handleRoute() {
+  const hash = window.location.hash;
+  if (hash.startsWith('#disciplina/')) {
+    const id = hash.replace('#disciplina/', '');
+    navigateToDiscipline(id);
+  } else {
+    navigateHome();
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Inicializar AOS
+  AOS.init({
+    duration: 700,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 80
+  });
+
+  // Inicializar Lucide Icons
+  lucide.createIcons();
+
+  // ---- AÑO EN FOOTER ----
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // ================================================================
+  // NAVEGACIÓN — Scroll effect
+  // ================================================================
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      navbar.classList.add('nav-scrolled');
+    } else {
+      navbar.classList.remove('nav-scrolled');
+    }
+  });
+
+  // ---- Menú móvil ----
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOverlay = document.getElementById('mobile-overlay');
+
+  function openMenu() {
+    mobileMenu.classList.add('open');
+    mobileOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    mobileOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  menuToggle.addEventListener('click', openMenu);
+  menuClose.addEventListener('click', closeMenu);
+  mobileOverlay.addEventListener('click', closeMenu);
+
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // ================================================================
+  // DISCIPLINAS — Renderizar tarjetas (clickables)
+  // ================================================================
+  const disciplinasGrid = document.getElementById('disciplinas-grid');
+  CONFIG.disciplinas.forEach((d, i) => {
+    const delay = i * 100;
+    disciplinasGrid.innerHTML += `
+      <div class="discipline-card group bg-ink-900" data-aos="fade-up" data-aos-delay="${delay}"
+           onclick="navigateToDiscipline('${d.id}')">
+        <div class="relative h-56 sm:h-64 overflow-hidden">
+          <img src="${d.imagen}" alt="${d.nombre}" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/40 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <h3 class="text-lg font-bold text-white font-display">${d.nombre}</h3>
+            <p class="text-gold-400 text-xs uppercase tracking-wider mt-1">${d.subtitulo}</p>
+          </div>
+        </div>
+        <div class="p-5">
+          <p class="text-ink-300 text-sm leading-relaxed mb-4">${d.descripcion}</p>
+          <span class="inline-flex items-center gap-1.5 text-gold-400 text-sm font-semibold group-hover:gap-2.5 transition-all">
+            Ver más
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </span>
+        </div>
+      </div>
+    `;
+  });
+
+  // ================================================================
+  // HORARIOS — Renderizar tabla (agrupada por día)
+  // ================================================================
+  const horariosTbody = document.getElementById('horarios-tabla');
+  let lastDay = '';
+  CONFIG.horarios.clases.forEach((c, i) => {
+    const bgClass = i % 2 === 0 ? 'bg-white' : 'bg-ink-50';
+    const showDay = c.dia !== lastDay;
+    lastDay = c.dia;
+    horariosTbody.innerHTML += `
+      <tr class="${bgClass} border-b border-ink-100">
+        <td class="py-2.5 px-4 font-medium text-ink-800 text-sm ${showDay ? '' : 'text-transparent'}">${c.dia}</td>
+        <td class="py-2.5 px-4 text-ink-600 text-sm whitespace-nowrap">${c.hora}</td>
+        <td class="py-2.5 px-4 text-ink-600 text-sm">${c.tipo}</td>
+      </tr>
+    `;
+  });
+
+  // ================================================================
+  // CUOTAS — Renderizar tarjetas
+  // ================================================================
+  const cuotasLista = document.getElementById('cuotas-lista');
+  CONFIG.horarios.cuotas.forEach(c => {
+    cuotasLista.innerHTML += `
+      <div class="flex items-center justify-between p-4 bg-white rounded-xl shadow-sm border border-ink-100 hover:shadow-md hover:border-gold-200 transition-all duration-200">
+        <div>
+          <h4 class="font-semibold text-ink-800 text-sm">${c.nombre}</h4>
+          <p class="text-ink-400 text-xs mt-0.5">${c.detalle}</p>
+        </div>
+        <span class="text-gold-700 font-bold text-lg font-display whitespace-nowrap ml-4">${c.precio}</span>
+      </div>
+    `;
+  });
+
+  // ================================================================
+  // MÁS INFORMACIÓN — Renderizar bloques
+  // ================================================================
+  const masInfoBloques = document.getElementById('mas-info-bloques');
+  CONFIG.masInfo.bloques.forEach((b, i) => {
+    const isReversed = i % 2 !== 0;
+    masInfoBloques.innerHTML += `
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${isReversed ? 'lg:flex-row-reverse' : ''}"
+           data-aos="fade-up">
+        <div class="${isReversed ? 'lg:order-2' : ''}">
+          <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 font-display">${b.titulo}</h3>
+          <p class="text-ink-300 leading-relaxed">${b.texto}</p>
+        </div>
+        <div class="${isReversed ? 'lg:order-1' : ''}">
+          <div class="rounded-xl overflow-hidden shadow-2xl border border-gold-400/10">
+            <img src="${b.imagen}" alt="${b.titulo}" class="w-full h-64 lg:h-80 object-cover">
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  // ================================================================
+  // FACEBOOK — Actualizar enlace
+  // ================================================================
+  if (CONFIG.facebookURL) {
+    document.getElementById('facebook-link').href = CONFIG.facebookURL;
+    document.getElementById('facebook-nombre').textContent = CONFIG.facebookNombrePagina;
+  }
+
+  // ================================================================
+  // GOOGLE REVIEWS
+  // ================================================================
+  const reviewsGrid = document.getElementById('reviews-grid');
+  const starsContainer = document.getElementById('review-stars');
+
+  document.getElementById('review-rating').textContent = CONFIG.googleReviews.puntuacionMedia.toFixed(1);
+  document.getElementById('review-count').textContent = CONFIG.googleReviews.totalResenas;
+  document.getElementById('google-maps-link').href = CONFIG.googleReviews.enlaceGoogleMaps;
+  document.getElementById('ver-resenas-link').href = CONFIG.googleReviews.enlaceGoogleMaps;
+
+  for (let i = 0; i < 5; i++) {
+    const filled = i < Math.round(CONFIG.googleReviews.puntuacionMedia);
+    starsContainer.innerHTML += `
+      <svg class="w-5 h-5 ${filled ? 'text-gold-400' : 'text-ink-600'}" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+      </svg>
+    `;
+  }
+
+  function renderResenas(resenas) {
+    reviewsGrid.innerHTML = '';
+    resenas.forEach((r, i) => {
+      const stars = Array(r.estrellas).fill(`
+        <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+        </svg>
+      `).join('');
+
+      reviewsGrid.innerHTML += `
+        <div class="review-card" data-aos="fade-up" data-aos-delay="${i * 80}">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-400 font-bold text-sm font-display">
+              ${r.autor.charAt(0)}
+            </div>
+            <div>
+              <p class="text-white text-sm font-semibold">${r.autor}</p>
+              <p class="text-ink-500 text-xs">${r.fecha}</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3">${stars}</div>
+          <p class="text-ink-300 text-sm leading-relaxed">${r.texto}</p>
+        </div>
+      `;
+    });
+  }
+
+  if (CONFIG.googleReviews.usarAPI && CONFIG.googleReviews.apiKey !== "TU_API_KEY_AQUI") {
+    fetch(`https://places.googleapis.com/v1/places/${CONFIG.googleReviews.placeId}?languageCode=es`, {
+      headers: {
+        'X-Goog-Api-Key': CONFIG.googleReviews.apiKey,
+        'X-Goog-FieldMask': 'reviews,rating,userRatingCount'
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.reviews) {
+        const resenas = data.reviews.map(r => ({
+          autor: r.authorAttribution?.displayName || 'Anónimo',
+          fecha: r.relativePublishTimeDescription || '',
+          estrellas: r.rating || 5,
+          texto: r.text?.text || ''
+        }));
+        document.getElementById('review-rating').textContent = (data.rating || 5).toFixed(1);
+        document.getElementById('review-count').textContent = data.userRatingCount || 0;
+        renderResenas(resenas);
+      } else {
+        renderResenas(CONFIG.googleReviews.resenasManuales);
+      }
+    })
+    .catch(() => {
+      renderResenas(CONFIG.googleReviews.resenasManuales);
+    });
+  } else {
+    renderResenas(CONFIG.googleReviews.resenasManuales);
+  }
+
+  // ================================================================
+  // CONTACTO — Footer datos
+  // ================================================================
+  const cont = CONFIG.contacto;
+  document.getElementById('footer-email').href = `mailto:${cont.email}`;
+  document.getElementById('footer-email').querySelector('span').textContent = cont.email;
+  document.getElementById('footer-tel').href = `tel:${cont.telefono.replace(/\s/g, '')}`;
+  document.getElementById('footer-tel').querySelector('span').textContent = cont.telefonoDisplay;
+  document.getElementById('footer-dir').href = cont.enlaceMapa;
+
+  const redesContainer = document.getElementById('footer-redes');
+  const redes = [
+    { key: 'facebook',  icon: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>`, url: cont.facebook },
+    { key: 'instagram', icon: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>`, url: cont.instagram },
+    { key: 'youtube',   icon: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`, url: cont.youtube },
+    { key: 'tiktok',    icon: `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>`, url: cont.tiktok },
+  ];
+
+  redes.forEach(r => {
+    if (r.url) {
+      redesContainer.innerHTML += `
+        <a href="${r.url}" target="_blank" rel="noopener noreferrer"
+           class="w-9 h-9 flex items-center justify-center rounded-lg bg-ink-800 text-ink-400 hover:bg-gold-400 hover:text-ink-900 transition-all duration-200"
+           aria-label="${r.key}">
+          ${r.icon}
+        </a>
+      `;
+    }
+  });
+
+  // ================================================================
+  // FORMULARIO
+  // ================================================================
+  const form = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    formStatus.classList.remove('hidden');
+    formStatus.className = 'text-center text-sm text-gold-400 mt-4';
+    formStatus.textContent = '¡Mensaje enviado correctamente! Te contactaremos pronto.';
+    form.reset();
+    setTimeout(() => {
+      formStatus.classList.add('hidden');
+    }, 5000);
+  });
+
+  // ================================================================
+  // Re-crear iconos de Lucide tras renderizado dinámico
+  // ================================================================
+  lucide.createIcons();
+
+  // ================================================================
+  // Handle initial route (in case page loads with a discipline hash)
+  // ================================================================
+  handleRoute();
+
+});
+</script>
+
+</body>
+</html>
