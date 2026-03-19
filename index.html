@@ -225,12 +225,32 @@ tailwind.config = {
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
   }
 
-  .schedule-board-card {
-    border: 1px solid rgba(212, 175, 55, 0.15);
-    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,245,244,0.96));
+  .schedule-grid-table th,
+  .schedule-grid-table td {
+    border: 1px solid #e7e5e4;
+    vertical-align: top;
+  }
+  .schedule-grid-table td {
+    min-width: 140px;
+    background: #ffffff;
+  }
+  .schedule-slot {
+    display: inline-flex;
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border-radius: 0.85rem;
+    background: linear-gradient(135deg, rgba(212,175,55,0.14), rgba(184,150,15,0.10));
+    border: 1px solid rgba(212,175,55,0.18);
+    color: #292524;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+  .center-widget-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(212, 175, 55, 0.16);
     border-radius: 1rem;
-    padding: 1rem;
-    box-shadow: 0 12px 30px rgba(12,10,9,0.06);
+    padding: 1.25rem;
   }
 
   .social-news-card {
@@ -612,6 +632,18 @@ const CONFIG = {
     ]
   },
 
+  centroWidget: {
+    titulo: "Conoce el Centro",
+    subtitulo: "Un espacio para entrenar, aprender y sentirte parte del grupo.",
+    descripcion: "Centro Yuanfen Kung Fu Sevilla combina tradición marcial, grupos reducidos y un ambiente cercano en pleno corazón de Triana. Aquí puedes visitarnos, ver cómo llegar y resolver dudas antes de empezar.",
+    puntos: [
+      "Escuela familiar con grupos reducidos.",
+      "Ubicación en Triana, fácil de localizar.",
+      "Clases para peques, jóvenes y adultos."
+    ],
+    mapaEmbed: "https://www.google.com/maps?q=San+Vicente+de+Pa%C3%BAl+4+41010+Sevilla&output=embed"
+  },
+
   /* ---- FACEBOOK ---- */
   facebookURL: "https://www.facebook.com/yuanfenkungfu",
   facebookNombrePagina: "Yuanfen Kung Fu Sevilla",
@@ -907,15 +939,15 @@ const CONFIG = {
       </h2>
     </div>
 
-    <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-10 items-start">
+    <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-8 lg:gap-10 items-start">
       <!-- Horarios -->
       <div data-aos="fade-right">
         <div class="flex items-center justify-between gap-4 mb-6">
           <h3 class="text-xl font-bold text-ink-800 flex items-center gap-2">
             <i data-lucide="calendar-days" class="w-5 h-5 text-gold-600"></i>
-            Tablón de Horarios
+            Tabla Semanal de Horarios
           </h3>
-          <span class="text-xs font-semibold uppercase tracking-[0.18em] text-gold-700 bg-gold-50 border border-gold-200 rounded-full px-3 py-1">Actualizado</span>
+          <span class="text-xs font-semibold uppercase tracking-[0.18em] text-gold-700 bg-gold-50 border border-gold-200 rounded-full px-3 py-1">Lunes a viernes</span>
         </div>
         <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-ink-100 mb-5">
           <img src="./assets/horario-septiembre-2024.jpg"
@@ -927,16 +959,19 @@ const CONFIG = {
         </div>
         <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-ink-100">
           <div class="px-4 py-3 border-b border-ink-100 bg-stone-50 flex items-center justify-between gap-3">
-            <p class="text-sm font-semibold text-ink-800">Tabla completa semanal</p>
-            <p class="text-xs text-ink-500">Agrupada por día y horario</p>
+            <p class="text-sm font-semibold text-ink-800">Horario semanal en formato tabla</p>
+            <p class="text-xs text-ink-500">Columnas por día y filas por hora</p>
           </div>
           <div class="overflow-x-auto">
-            <table class="w-full text-sm min-w-[540px]">
+            <table class="schedule-grid-table w-full text-sm min-w-[820px]">
               <thead>
                 <tr class="bg-ink-900 text-gold-400">
-                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Día</th>
                   <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Hora</th>
-                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Clase</th>
+                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Lunes</th>
+                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Martes</th>
+                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Miércoles</th>
+                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Jueves</th>
+                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Viernes</th>
                 </tr>
               </thead>
               <tbody id="horarios-tabla">
@@ -1001,6 +1036,59 @@ const CONFIG = {
               <li>El descuento por antigüedad es de 5 € mensuales.</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================
+     EL CENTRO
+     ================================================================ -->
+<section id="centro" class="section-dark py-20 lg:py-28 border-t border-ink-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <div class="divider-gold mx-auto mb-6"></div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+        El <span class="text-gold-400">Centro</span>
+      </h2>
+      <p id="centro-subtitulo" class="text-ink-300 max-w-2xl mx-auto">
+        Un espacio para entrenar, aprender y sentirte parte del grupo.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-8 lg:gap-10 items-start">
+      <div class="space-y-5" data-aos="fade-right">
+        <article class="center-widget-card">
+          <p class="text-gold-400 text-xs uppercase tracking-[0.18em] font-semibold mb-3">Conoce el centro</p>
+          <h3 class="text-white text-2xl font-display mb-4" id="centro-titulo">Conoce el Centro</h3>
+          <p class="text-ink-300 leading-relaxed mb-5" id="centro-descripcion">Centro Yuanfen Kung Fu Sevilla combina tradición marcial, grupos reducidos y un ambiente cercano en pleno corazón de Triana.</p>
+          <ul id="centro-puntos" class="space-y-3 text-ink-200"></ul>
+        </article>
+
+        <article class="center-widget-card">
+          <p class="text-gold-400 text-xs uppercase tracking-[0.18em] font-semibold mb-3">Datos del centro</p>
+          <div class="space-y-4 text-sm">
+            <a id="centro-email" href="mailto:yuanfenkungfu@gmail.com" class="flex items-start gap-3 text-ink-200 hover:text-gold-400">
+              <i data-lucide="mail" class="w-4 h-4 mt-0.5"></i>
+              <span>yuanfenkungfu@gmail.com</span>
+            </a>
+            <a id="centro-tel" href="tel:+34617769232" class="flex items-start gap-3 text-ink-200 hover:text-gold-400">
+              <i data-lucide="phone" class="w-4 h-4 mt-0.5"></i>
+              <span>617 76 92 32</span>
+            </a>
+            <a id="centro-dir" href="#" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 text-ink-200 hover:text-gold-400">
+              <i data-lucide="map-pin" class="w-4 h-4 mt-0.5"></i>
+              <span>San Vicente de Paúl, 4 · 41010 Sevilla</span>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div data-aos="fade-left">
+        <div class="rounded-2xl overflow-hidden border border-gold-400/15 shadow-2xl bg-white">
+          <iframe id="centro-mapa" title="Mapa del centro" src="https://www.google.com/maps?q=San+Vicente+de+Pa%C3%BAl+4+41010+Sevilla&output=embed" width="100%" height="460" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
@@ -1545,45 +1633,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ================================================================
-  // HORARIOS — Renderizar tablón resumen y tabla (agrupada por día)
+  // HORARIOS — Renderizar tabla semanal por días y horas
   // ================================================================
   const horariosTbody = document.getElementById('horarios-tabla');
-  const horariosTablon = document.getElementById('horarios-tablon');
-  const horariosPorDia = CONFIG.horarios.clases.reduce((acc, clase) => {
-    acc[clase.dia] = acc[clase.dia] || [];
-    acc[clase.dia].push(clase);
+  const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'];
+  const horasUnicas = [...new Set(CONFIG.horarios.clases.map(c => c.hora))];
+  const horariosIndexados = CONFIG.horarios.clases.reduce((acc, clase) => {
+    const key = `${clase.dia}__${clase.hora}`;
+    acc[key] = acc[key] || [];
+    acc[key].push(clase.tipo);
     return acc;
   }, {});
 
-  Object.entries(horariosPorDia).forEach(([dia, clases]) => {
-    horariosTablon.innerHTML += `
-      <article class="schedule-board-card">
-        <div class="flex items-center justify-between gap-3 mb-3">
-          <h4 class="font-display text-lg text-ink-900">${dia}</h4>
-          <span class="text-xs font-semibold uppercase tracking-[0.14em] text-gold-700">${clases.length} clases</span>
-        </div>
-        <div class="space-y-2.5">
-          ${clases.map(clase => `
-            <div class="rounded-lg border border-ink-100 bg-white px-3 py-2.5">
-              <p class="text-sm font-semibold text-ink-800">${clase.hora}</p>
-              <p class="text-sm text-ink-600 mt-1">${clase.tipo}</p>
-            </div>
-          `).join('')}
-        </div>
-      </article>
-    `;
-  });
-
-  let lastDay = '';
-  CONFIG.horarios.clases.forEach((c, i) => {
-    const bgClass = i % 2 === 0 ? 'bg-white' : 'bg-ink-50';
-    const showDay = c.dia !== lastDay;
-    lastDay = c.dia;
+  horasUnicas.forEach((hora, i) => {
+    const bgClass = i % 2 === 0 ? 'bg-white' : 'bg-stone-50';
     horariosTbody.innerHTML += `
-      <tr class="${bgClass} border-b border-ink-100">
-        <td class="py-2.5 px-4 font-medium text-ink-800 text-sm ${showDay ? '' : 'text-transparent'}">${c.dia}</td>
-        <td class="py-2.5 px-4 text-ink-600 text-sm whitespace-nowrap">${c.hora}</td>
-        <td class="py-2.5 px-4 text-ink-600 text-sm">${c.tipo}</td>
+      <tr class="${bgClass}">
+        <th scope="row" class="py-3 px-4 text-left font-semibold text-ink-800 whitespace-nowrap">${hora}</th>
+        ${diasSemana.map(dia => {
+          const key = `${dia}__${hora}`;
+          const clases = horariosIndexados[key] || [];
+          return `
+            <td class="py-3 px-3 align-top">
+              ${clases.length
+                ? clases.map(tipo => `<span class="schedule-slot">${tipo}</span>`).join('<div class="h-2"></div>')
+                : '<span class="text-ink-300 text-xs">—</span>'}
+            </td>
+          `;
+        }).join('')}
       </tr>
     `;
   });
@@ -1623,6 +1700,31 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       </div>
+    `;
+  });
+
+  // ================================================================
+  // CENTRO — Widget informativo + mapa
+  // ================================================================
+  const centro = CONFIG.centroWidget;
+  document.getElementById('centro-titulo').textContent = centro.titulo;
+  document.getElementById('centro-subtitulo').textContent = centro.subtitulo;
+  document.getElementById('centro-descripcion').textContent = centro.descripcion;
+  document.getElementById('centro-mapa').src = centro.mapaEmbed;
+  document.getElementById('centro-email').href = `mailto:${CONFIG.contacto.email}`;
+  document.getElementById('centro-email').querySelector('span').textContent = CONFIG.contacto.email;
+  document.getElementById('centro-tel').href = `tel:${CONFIG.contacto.telefono.replace(/\s/g, '')}`;
+  document.getElementById('centro-tel').querySelector('span').textContent = CONFIG.contacto.telefonoDisplay;
+  document.getElementById('centro-dir').href = CONFIG.contacto.enlaceMapa;
+  document.getElementById('centro-dir').querySelector('span').textContent = `${CONFIG.contacto.direccion} · ${CONFIG.contacto.ciudad}`;
+
+  const centroPuntos = document.getElementById('centro-puntos');
+  centro.puntos.forEach(punto => {
+    centroPuntos.innerHTML += `
+      <li class="flex items-start gap-3">
+        <span class="mt-1.5 w-2 h-2 rounded-full bg-gold-400 shrink-0"></span>
+        <span>${punto}</span>
+      </li>
     `;
   });
 
