@@ -13,6 +13,7 @@
 <meta property="og:title" content="Kung Fu Sevilla | Centro Yuanfen Kung Fu Sevilla">
 <meta property="og:description" content="Escuela de kung fu en Sevilla con clases de Tang Lang Quan, sanda, defensa personal y kung fu infantil en Triana.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://kungfusevilla.net/">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Centro Yuanfen Kung Fu Sevilla">
 <meta name="twitter:card" content="summary_large_image">
@@ -209,10 +210,40 @@ tailwind.config = {
                 box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
   }
   .form-input::placeholder { color: #78716c; }
+  select.form-input {
+    color: #e7e5e4;
+    background-color: rgba(255,255,255,0.05);
+    appearance: none;
+  }
+  select.form-input option {
+    color: #0c0a09;
+    background: #f5f5f4;
+  }
   .form-input:focus {
     outline: none;
     border-color: #D4AF37;
     box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+  }
+
+  .schedule-board-card {
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,245,244,0.96));
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 12px 30px rgba(12,10,9,0.06);
+  }
+
+  .social-news-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+  }
+  .social-news-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 18px 32px rgba(0,0,0,0.22);
   }
 
   /* ============================================================
@@ -584,6 +615,30 @@ const CONFIG = {
   /* ---- FACEBOOK ---- */
   facebookURL: "https://www.facebook.com/yuanfenkungfu",
   facebookNombrePagina: "Yuanfen Kung Fu Sevilla",
+  instagramURL: "",
+
+  noticiasSociales: {
+    titulo: "Novedades de la escuela",
+    descripcion: "Consulta actividades, talleres, cambios de horario y publicaciones recientes desde nuestras redes sociales.",
+    publicaciones: [
+      {
+        titulo: "Últimas novedades en Facebook",
+        resumen: "Consulta anuncios de clases, fotos de entrenamientos y eventos recientes en la página oficial.",
+        fecha: "Actualización automática",
+        red: "Facebook",
+        enlace: "https://www.facebook.com/yuanfenkungfu",
+        cta: "Ver Facebook"
+      },
+      {
+        titulo: "Próximos cursos y avisos",
+        resumen: "Utiliza este espacio para destacar seminarios, cambios de horario o jornadas de puertas abiertas.",
+        fecha: "Editable",
+        red: "Tablón",
+        enlace: "#contacto",
+        cta: "Solicitar información"
+      }
+    ]
+  },
 
   /* ---- GOOGLE REVIEWS ---- */
   googleReviews: {
@@ -855,28 +910,40 @@ const CONFIG = {
     <div class="grid lg:grid-cols-[1.05fr_0.95fr] gap-8 lg:gap-10 items-start">
       <!-- Horarios -->
       <div data-aos="fade-right">
-        <h3 class="text-xl font-bold text-ink-800 mb-6 flex items-center gap-2">
-          <i data-lucide="calendar-days" class="w-5 h-5 text-gold-600"></i>
-          Horario de Clases
-        </h3>
+        <div class="flex items-center justify-between gap-4 mb-6">
+          <h3 class="text-xl font-bold text-ink-800 flex items-center gap-2">
+            <i data-lucide="calendar-days" class="w-5 h-5 text-gold-600"></i>
+            Tablón de Horarios
+          </h3>
+          <span class="text-xs font-semibold uppercase tracking-[0.18em] text-gold-700 bg-gold-50 border border-gold-200 rounded-full px-3 py-1">Actualizado</span>
+        </div>
         <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-ink-100 mb-5">
           <img src="./assets/horario-septiembre-2024.jpg"
                alt="Horarios y tarifas del Centro Yuanfen Kung Fu Sevilla"
                class="w-full h-auto">
         </div>
+        <div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 mb-5" id="horarios-tablon">
+          <!-- Se genera con JavaScript -->
+        </div>
         <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-ink-100">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="bg-ink-900 text-gold-400">
-                <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Día</th>
-                <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Hora</th>
-                <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Clase</th>
-              </tr>
-            </thead>
-            <tbody id="horarios-tabla">
-              <!-- Se genera con JavaScript -->
-            </tbody>
-          </table>
+          <div class="px-4 py-3 border-b border-ink-100 bg-stone-50 flex items-center justify-between gap-3">
+            <p class="text-sm font-semibold text-ink-800">Tabla completa semanal</p>
+            <p class="text-xs text-ink-500">Agrupada por día y horario</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm min-w-[540px]">
+              <thead>
+                <tr class="bg-ink-900 text-gold-400">
+                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Día</th>
+                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Hora</th>
+                  <th class="py-3 px-4 text-left font-semibold tracking-wide uppercase text-xs">Clase</th>
+                </tr>
+              </thead>
+              <tbody id="horarios-tabla">
+                <!-- Se genera con JavaScript -->
+              </tbody>
+            </table>
+          </div>
         </div>
         <p id="nota-horario" class="mt-4 text-sm text-ink-400 italic">
           Los horarios pueden variar. Contáctanos para confirmar disponibilidad.
@@ -961,28 +1028,49 @@ const CONFIG = {
 
 
 <!-- ================================================================
-     FACEBOOK
+     NOTICIAS / REDES
      ================================================================ -->
-<section id="facebook" class="section-gold py-16 lg:py-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h2 class="text-2xl sm:text-3xl font-bold text-ink-900 mb-4">
-      Síguenos en Facebook
-    </h2>
-    <p class="text-ink-700 mb-8 max-w-xl mx-auto">
-      Mantente al día con nuestras actividades, eventos, fotos y noticias.
-    </p>
-    <a id="facebook-link" href="https://www.facebook.com/yuanfenkungfu"
-       target="_blank" rel="noopener noreferrer"
-       class="inline-flex items-center gap-3 px-8 py-4 bg-ink-900 text-gold-400 rounded-xl font-display font-semibold text-sm uppercase tracking-wider hover:bg-ink-800 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-      </svg>
-      <span id="facebook-nombre">Yuanfen Kung Fu Sevilla</span>
-    </a>
-    <p class="mt-4 text-sm text-ink-600">
-      <i data-lucide="external-link" class="w-3 h-3 inline-block mr-1"></i>
-      Se abrirá en una nueva pestaña
-    </p>
+<section id="noticias" class="section-gold py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-ink-900 mb-4">
+        Tablón de <span class="text-crimson-600">Noticias</span>
+      </h2>
+      <p id="noticias-descripcion" class="text-ink-700 max-w-2xl mx-auto">
+        Mantente al día con nuestras actividades, eventos, fotos y noticias recientes desde redes sociales.
+      </p>
+    </div>
+
+    <div class="grid xl:grid-cols-[1.15fr_0.85fr] gap-6 lg:gap-8 items-start">
+      <div class="grid sm:grid-cols-2 gap-5" id="noticias-grid">
+        <!-- Se genera con JavaScript -->
+      </div>
+
+      <div class="bg-ink-900 rounded-2xl shadow-2xl border border-gold-400/15 p-4 sm:p-5">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div>
+            <p class="text-gold-400 text-xs uppercase tracking-[0.18em] font-semibold">Facebook</p>
+            <h3 class="text-white text-xl font-display">Publicaciones recientes</h3>
+          </div>
+          <a id="facebook-link" href="https://www.facebook.com/yuanfenkungfu" target="_blank" rel="noopener noreferrer" class="text-gold-400 text-sm hover:text-gold-300">Ver página</a>
+        </div>
+        <div class="rounded-xl overflow-hidden bg-white">
+          <iframe
+            id="facebook-feed"
+            title="Noticias de Facebook"
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fyuanfenkungfu&tabs=timeline&width=500&height=720&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false"
+            width="100%"
+            height="720"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+          </iframe>
+        </div>
+        <p class="mt-4 text-xs text-ink-400">Si más adelante añades Instagram en la configuración, podemos enlazarlo también en las tarjetas del tablón.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1457,9 +1545,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ================================================================
-  // HORARIOS — Renderizar tabla (agrupada por día)
+  // HORARIOS — Renderizar tablón resumen y tabla (agrupada por día)
   // ================================================================
   const horariosTbody = document.getElementById('horarios-tabla');
+  const horariosTablon = document.getElementById('horarios-tablon');
+  const horariosPorDia = CONFIG.horarios.clases.reduce((acc, clase) => {
+    acc[clase.dia] = acc[clase.dia] || [];
+    acc[clase.dia].push(clase);
+    return acc;
+  }, {});
+
+  Object.entries(horariosPorDia).forEach(([dia, clases]) => {
+    horariosTablon.innerHTML += `
+      <article class="schedule-board-card">
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <h4 class="font-display text-lg text-ink-900">${dia}</h4>
+          <span class="text-xs font-semibold uppercase tracking-[0.14em] text-gold-700">${clases.length} clases</span>
+        </div>
+        <div class="space-y-2.5">
+          ${clases.map(clase => `
+            <div class="rounded-lg border border-ink-100 bg-white px-3 py-2.5">
+              <p class="text-sm font-semibold text-ink-800">${clase.hora}</p>
+              <p class="text-sm text-ink-600 mt-1">${clase.tipo}</p>
+            </div>
+          `).join('')}
+        </div>
+      </article>
+    `;
+  });
+
   let lastDay = '';
   CONFIG.horarios.clases.forEach((c, i) => {
     const bgClass = i % 2 === 0 ? 'bg-white' : 'bg-ink-50';
@@ -1513,11 +1627,44 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ================================================================
-  // FACEBOOK — Actualizar enlace
+  // NOTICIAS / REDES
   // ================================================================
+  const noticiasGrid = document.getElementById('noticias-grid');
+  document.getElementById('noticias-descripcion').textContent = CONFIG.noticiasSociales.descripcion;
+
+  CONFIG.noticiasSociales.publicaciones.forEach((item, i) => {
+    const linkAttrs = item.enlace.startsWith('#')
+      ? `href="${item.enlace}" onclick="navigateHome()"`
+      : `href="${item.enlace}" target="_blank" rel="noopener noreferrer"`;
+
+    noticiasGrid.innerHTML += `
+      <article class="social-news-card" data-aos="fade-up" data-aos-delay="${i * 90}">
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <span class="inline-flex items-center rounded-full bg-gold-400/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-gold-400">${item.red}</span>
+          <span class="text-xs text-ink-500">${item.fecha}</span>
+        </div>
+        <h3 class="text-white text-lg font-display mb-3">${item.titulo}</h3>
+        <p class="text-ink-300 text-sm leading-relaxed mb-5">${item.resumen}</p>
+        <a ${linkAttrs} class="inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 text-sm font-semibold">
+          ${item.cta}
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+      </article>
+    `;
+  });
+
   if (CONFIG.facebookURL) {
     document.getElementById('facebook-link').href = CONFIG.facebookURL;
-    document.getElementById('facebook-nombre').textContent = CONFIG.facebookNombrePagina;
+    const facebookPluginURL = new URL('https://www.facebook.com/plugins/page.php');
+    facebookPluginURL.searchParams.set('href', CONFIG.facebookURL);
+    facebookPluginURL.searchParams.set('tabs', 'timeline');
+    facebookPluginURL.searchParams.set('width', '500');
+    facebookPluginURL.searchParams.set('height', '720');
+    facebookPluginURL.searchParams.set('small_header', 'false');
+    facebookPluginURL.searchParams.set('adapt_container_width', 'true');
+    facebookPluginURL.searchParams.set('hide_cover', 'false');
+    facebookPluginURL.searchParams.set('show_facepile', 'false');
+    document.getElementById('facebook-feed').src = facebookPluginURL.toString();
   }
 
   // ================================================================
